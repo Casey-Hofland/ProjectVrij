@@ -1988,7 +1988,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561811922}
-  m_LocalRotation: {x: -0.48190314, y: 0.000000007703491, z: -0.00000007727655, w: 0.8762246}
+  m_LocalRotation: {x: -0.48190314, y: -0.000000018781272, z: -0.000000029120407,
+    w: 0.8762246}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2250,7 +2251,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631496496}
-  m_LocalRotation: {x: 0.28795153, y: 0.00000005747032, z: -0.000000017280584, w: 0.957645}
+  m_LocalRotation: {x: 0.28795153, y: 0.000000005784915, z: -0.0000000017394496, w: 0.957645}
   m_LocalPosition: {x: 462.5, y: 61.06, z: 457.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3496,6 +3497,7 @@ GameObject:
   - component: {fileID: 744788004}
   - component: {fileID: 744788008}
   - component: {fileID: 744788007}
+  - component: {fileID: 744788009}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Untagged
@@ -3613,6 +3615,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &744788009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744788002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &761979642
 GameObject:
   m_ObjectHideFlags: 0
