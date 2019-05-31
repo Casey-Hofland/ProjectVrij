@@ -4,22 +4,24 @@ using Cinemachine;
 [RequireComponent(typeof(Rigidbody))]
 public class FishController : MonoBehaviour
 {
-	[Header("Unsafe")]
-	[SerializeField] private float speed = 3f;
-	[Tooltip("Time in seconds it takes to reach the set speed")]
+	[Header("Movement Settings")]
+	[SerializeField] private float forwardSpeed = 3f;
+	[SerializeField] private float sidewaysSpeed = 2f;
+	[SerializeField] private float backwardsSpeed = 1f;
+	[SerializeField] private float verticalSpeed = 2f;
+	[Tooltip("Time in seconds it takes to reach the set speed.")]
 	[SerializeField] private float accelerationTime = 1f;
-
-	[Tooltip("Time in seconds it takes to stop to a halt")]
+	[Tooltip("Time in seconds it takes to stop to a halt.")]
 	[SerializeField] private float decelerationTime = 2f;
-	[SerializeField] private float idleThreshold = 0.000001f;
-
-	[Header("Safe")]
-	[Tooltip("The higher this value, the faster the gameObject turns on reorienting itself")]
+	[Tooltip("The higher this value, the faster the gameObject turns on reorienting itself.")]
 	[SerializeField] private float turnSmoothing = 2f;
 
 	[Header("Camera Settings")]
+	[Tooltip("The minimum to maximum distance the camera can be away from the player.")]
 	[SerializeField] private Vector2 camRadiusRange = new Vector2(4f, 20f);
+	[Tooltip("The radius for the top and bottom of the camera.")]
 	[SerializeField] [Range(0f, 1f)] private float camSplineRadiusMultiplier = 0.25f;
+	[Tooltip("The higher this value, the faster the camera zooms to the desired value.")]
 	[SerializeField] private float zoomSmoothing = 2f;
 
 	private float camMin { get { return camRadiusRange.x; } }
@@ -29,8 +31,6 @@ public class FishController : MonoBehaviour
 	
 	private Vector3 lastMoveVelocity = Vector3.zero;
 
-	private float cTime = 0f; // Used for testing
-
 	private new Rigidbody rigidbody;
 	private new Camera camera;
 	private CinemachineFreeLook cinemachineCamera;
@@ -39,13 +39,11 @@ public class FishController : MonoBehaviour
 	{
 		rigidbody = GetComponent<Rigidbody>();
 		camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
 		cinemachineCamera = GameObject.FindObjectOfType<CinemachineFreeLook>();
 
 		Cursor.lockState = CursorLockMode.Locked;
 
-		Debug.LogWarning("Target Direction in 'GetTranslation()' and 'Rotate()' are magic numbers!");
-		Debug.LogWarning("slowdownTime depends on idleThreshold to be 0.000001 to be correct! Also it's not working anymore - don't know why yet");
+		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
 	}
 
 	private void Start()
@@ -63,30 +61,32 @@ public class FishController : MonoBehaviour
 		{
 			rigidbody.useGravity = false;
 
-			Vector3 force = rigidbody.velocity + translation;
-			rigidbody.Sleep();
+			rigidbody.velocity = translation;
+
+			/*
+			Vector3 force = translation;
+			rigidbody.velocity = Vector3.zero;
 
 			if (Mathf.Pow(speed, 2) <= force.sqrMagnitude)
 			{
 				force = force.normalized * speed;
 			}
 
+			Debug.Log(force);
 			rigidbody.AddForce(force, ForceMode.VelocityChange);
+			Debug.Log(rigidbody.velocity);
+			*/
 
 			Rotate();
-
 			lastMoveVelocity = rigidbody.velocity;
-			cTime = Time.timeSinceLevelLoad;
 		}
 		else if (decelerationTime <= 0 ||
-			Mathf.Pow(idleThreshold, 2) >= rigidbody.velocity.sqrMagnitude ||
+			Mathf.Pow(0.000001f, 2) >= rigidbody.velocity.sqrMagnitude ||
 			lastMoveVelocity.normalized != rigidbody.velocity.normalized)
 		{
 			rigidbody.useGravity = true;
 			rigidbody.Sleep();
 			lastMoveVelocity = Vector3.zero;
-
-			//Debug.Log(Time.timeSinceLevelLoad - cTime + " : " + rigidbody.velocity);
 		}
 		else 
 		{
@@ -102,31 +102,50 @@ public class FishController : MonoBehaviour
 	private Vector3 GetTranslation()
 	{
 		Vector3 translation = new Vector3();
+		float speed = 0f;
+		int speedDivider = 0;
 
-		Vector3 direction = /*camera.*/transform.forward;
-		//direction.y -= (1f / 3f);
-		if (Input.GetKey(KeyCode.W))
+		bool qKey = Input.GetKey(KeyCode.Q),
+			eKey = Input.GetKey(KeyCode.E),
+			wKey = Input.GetKey(KeyCode.W),
+			sKey = Input.GetKey(KeyCode.S),
+			dKey = Input.GetKey(KeyCode.D),
+			aKey = Input.GetKey(KeyCode.A);
+
+		if (qKey != eKey)
 		{
-			translation += direction;
+			translation += Vector3.up * (qKey ? 1 : -1);
+			speed += verticalSpeed;
+			speedDivider++;
 		}
-		if (Input.GetKey(KeyCode.S))
+		if (wKey != sKey)
 		{
-			translation -= direction;
+			translation += transform.forward * (wKey ? 1 : -1);
+			speed += (wKey ? forwardSpeed : backwardsSpeed);
+			speedDivider++;
+		}
+		if (dKey != aKey)
+		{
+			translation += transform.right * (dKey ? 1 : -1);
+			speed += sidewaysSpeed;
+			speedDivider++;
 		}
 
-		translation *= speed;
-		if (accelerationTime > 0)
-		{
-			translation *= Time.deltaTime / accelerationTime;
-		}
+		translation.Normalize();
+		if (speedDivider > 0)
+			speed /= speedDivider;
+
+		float acceleratedTime = rigidbody.velocity.magnitude / speed * Time.deltaTime + Time.deltaTime;
+		float t = (acceleratedTime <= accelerationTime ? acceleratedTime / accelerationTime : accelerationTime / acceleratedTime);
+		translation *= Mathf.Lerp(rigidbody.velocity.magnitude, speed, t);
 
 		return translation;
 	}
 
+	// Rotates the fish to where it needs to be facing.
 	private void Rotate()
 	{
 		Vector3 targetDirection = camera.transform.forward;
-		targetDirection.y += (2f / 3f);
 
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		targetRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
@@ -149,7 +168,7 @@ public class FishController : MonoBehaviour
 		if (lerp)
 		{
 			radius = Mathf.Lerp(cinemachineCamera.m_Orbits[1].m_Radius, radius, zoomSmoothing * Time.deltaTime);
-			splineRadius = Mathf.Lerp(cinemachineCamera.m_Orbits[0].m_Height, splineRadius, zoomSmoothing * Time.deltaTime);
+			splineRadius = Mathf.Lerp(cinemachineCamera.m_Orbits[0].m_Radius, splineRadius, zoomSmoothing * Time.deltaTime);
 		}
 
 		cinemachineCamera.m_Orbits[0].m_Height = radius;
