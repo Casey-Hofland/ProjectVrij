@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Sound Manager\Sound
-    Manager.fspro
-  SourceProjectPathUnformatted: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Sound
-    Manager\Sound Manager.fspro
-  SourceBankPathUnformatted: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Sound
-    Manager\Build
+  sourceProjectPath: Assets\FMODAssets\Sound Manager.fspro
+  SourceProjectPathUnformatted: Assets\FMODAssets\Sound Manager.fspro
+  SourceBankPathUnformatted: Assets\FMODAssets\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
