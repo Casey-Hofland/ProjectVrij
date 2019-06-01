@@ -1,14 +1,16 @@
-﻿using UnityEngine;
-using Cinemachine;
+﻿using Cinemachine;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class FishController : MonoBehaviour
+public class SwimController : MonoBehaviour
 {
-	[Header("Movement Settings")]
+	[Header("Speed")]
 	[SerializeField] private float forwardSpeed = 3f;
 	[SerializeField] private float sidewaysSpeed = 2f;
 	[SerializeField] private float backwardsSpeed = 1f;
 	[SerializeField] private float verticalSpeed = 2f;
+
+	[Header("Responsiveness")]
 	[Tooltip("Time in seconds it takes to reach the set speed.")]
 	[SerializeField] private float accelerationTime = 1f;
 	[Tooltip("Time in seconds it takes to stop to a halt.")]
@@ -16,7 +18,7 @@ public class FishController : MonoBehaviour
 	[Tooltip("The higher this value, the faster the gameObject turns on reorienting itself.")]
 	[SerializeField] private float turnSmoothing = 2f;
 
-	[Header("Camera Settings")]
+	[Header("Camera Radius")]
 	[Tooltip("The minimum to maximum distance the camera can be away from the player.")]
 	[SerializeField] private Vector2 camRadiusRange = new Vector2(4f, 20f);
 	[Tooltip("The radius for the top and bottom of the camera.")]
@@ -59,27 +61,14 @@ public class FishController : MonoBehaviour
 
 		if (isMoving)
 		{
+			// Move the controller.
 			rigidbody.useGravity = false;
-
-			rigidbody.velocity = translation;
-
-			/*
-			Vector3 force = translation;
-			rigidbody.velocity = Vector3.zero;
-
-			if (Mathf.Pow(speed, 2) <= force.sqrMagnitude)
-			{
-				force = force.normalized * speed;
-			}
-
-			Debug.Log(force);
-			rigidbody.AddForce(force, ForceMode.VelocityChange);
-			Debug.Log(rigidbody.velocity);
-			*/
+			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
 
 			Rotate();
 			lastMoveVelocity = rigidbody.velocity;
 		}
+		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||
 			Mathf.Pow(0.000001f, 2) >= rigidbody.velocity.sqrMagnitude ||
 			lastMoveVelocity.normalized != rigidbody.velocity.normalized)
@@ -90,6 +79,7 @@ public class FishController : MonoBehaviour
 		}
 		else 
 		{
+			// Slow down the rigidbody.
 			Vector3 slowdownVelocity = -lastMoveVelocity * Time.deltaTime / decelerationTime;
 			rigidbody.AddForce(slowdownVelocity, ForceMode.VelocityChange);
 
@@ -99,6 +89,7 @@ public class FishController : MonoBehaviour
 		SetCamera();
 	}
 
+	// Returns a movement vector for determining the next translation.
 	private Vector3 GetTranslation()
 	{
 		Vector3 translation = new Vector3();
@@ -112,6 +103,7 @@ public class FishController : MonoBehaviour
 			dKey = Input.GetKey(KeyCode.D),
 			aKey = Input.GetKey(KeyCode.A);
 
+		// If one of direction keys is pressed, add direction and speed to the next frame of movement.
 		if (qKey != eKey)
 		{
 			translation += Vector3.up * (qKey ? 1 : -1);
@@ -131,10 +123,14 @@ public class FishController : MonoBehaviour
 			speedDivider++;
 		}
 
-		translation.Normalize();
-		if (speedDivider > 0)
-			speed /= speedDivider;
+		if (speedDivider == 0)
+			return translation;
 
+		// Normalize the direction and speed.
+		translation.Normalize();
+		speed /= speedDivider;
+
+		// Lerp the target speed according to the current speed.
 		float acceleratedTime = rigidbody.velocity.magnitude / speed * Time.deltaTime + Time.deltaTime;
 		float t = (acceleratedTime <= accelerationTime ? acceleratedTime / accelerationTime : accelerationTime / acceleratedTime);
 		translation *= Mathf.Lerp(rigidbody.velocity.magnitude, speed, t);
@@ -142,7 +138,7 @@ public class FishController : MonoBehaviour
 		return translation;
 	}
 
-	// Rotates the fish to where it needs to be facing.
+	// Rotates the controller to face in line with the camera.
 	private void Rotate()
 	{
 		Vector3 targetDirection = camera.transform.forward;
@@ -153,11 +149,12 @@ public class FishController : MonoBehaviour
 		rigidbody.MoveRotation(targetRotation);
 	}
 
+	// Updates the Camera Zoom.
 	private void SetCamera(bool lerp = true)
 	{
 		float radius = camMax;
 
-		// Casts a ray to the ground to check if the camera should be zoomed in (But flawed, raycast is only checking for down)
+		// Casts a ray to the ground to check if the camera should be zoomed in or out (But flawed, raycast is only checking for down)
 		if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, camMax, LayerMask.GetMask("Terrain"), QueryTriggerInteraction.Ignore))
 		{
 			radius = Mathf.Max(camMin, hitInfo.distance);
@@ -165,12 +162,14 @@ public class FishController : MonoBehaviour
 
 		float splineRadius = radius * camSplineRadiusMultiplier;
 
+		// Lerps the target values according to the current values.
 		if (lerp)
 		{
 			radius = Mathf.Lerp(cinemachineCamera.m_Orbits[1].m_Radius, radius, zoomSmoothing * Time.deltaTime);
 			splineRadius = Mathf.Lerp(cinemachineCamera.m_Orbits[0].m_Radius, splineRadius, zoomSmoothing * Time.deltaTime);
 		}
 
+		// Sets the corresponding Cinemachine values.
 		cinemachineCamera.m_Orbits[0].m_Height = radius;
 		cinemachineCamera.m_Orbits[0].m_Radius = splineRadius;
 
@@ -180,20 +179,10 @@ public class FishController : MonoBehaviour
 		cinemachineCamera.m_Orbits[2].m_Radius = splineRadius;
 	}
 
-	/*
-	private void OnTriggerStay(Collider other)
-	{
-		if (LayerMask.LayerToName(other.gameObject.layer) == "Terrain")
-		{
-			other.ClosestPoint(transform.position);
-			SetCamera();
-		}
-	}
-	*/
-
 #if UNITY_EDITOR
 	private void OnDrawGizmos()
 	{
+		// Draw the camera circle of influence.
 		UnityEditor.Handles.color = Color.green;
 
 		UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.up, camMin);
