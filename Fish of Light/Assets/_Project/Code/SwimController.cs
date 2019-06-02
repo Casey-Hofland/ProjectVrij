@@ -1,6 +1,10 @@
 ﻿using Cinemachine;
 using UnityEngine;
+using UnityEditor;
 
+[DisallowMultipleComponent]
+[CanEditMultipleObjects]
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody))]
 public class SwimController : MonoBehaviour
 {
@@ -9,6 +13,7 @@ public class SwimController : MonoBehaviour
 	[SerializeField] private float sidewaysSpeed = 2f;
 	[SerializeField] private float backwardsSpeed = 1f;
 	[SerializeField] private float verticalSpeed = 2f;
+	[SerializeField] private Vector2 animatorSpeedRange = new Vector2(0.5f, 2f);
 
 	[Header("Responsiveness")]
 	[Tooltip("Time in seconds it takes to reach the set speed.")]
@@ -33,12 +38,14 @@ public class SwimController : MonoBehaviour
 	
 	private Vector3 lastMoveVelocity = Vector3.zero;
 
+	private Animator animator;
 	private new Rigidbody rigidbody;
 	private new Camera camera;
 	private CinemachineFreeLook cinemachineCamera;
 
 	private void Awake()
 	{
+		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody>();
 		camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		cinemachineCamera = GameObject.FindObjectOfType<CinemachineFreeLook>();
@@ -46,11 +53,12 @@ public class SwimController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 
 		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
+		Debug.LogWarning("The AnimtorSpeedRange Lerping assumes forwardSpeed is the maximum speed");
 	}
 
 	private void Start()
 	{
-		SetCamera(false);
+		UpdateCameraZoom(false);
 	}
 
 	private void FixedUpdate()
@@ -64,9 +72,9 @@ public class SwimController : MonoBehaviour
 			// Move the controller.
 			rigidbody.useGravity = false;
 			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
+			lastMoveVelocity = rigidbody.velocity;
 
 			Rotate();
-			lastMoveVelocity = rigidbody.velocity;
 		}
 		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||
@@ -86,7 +94,8 @@ public class SwimController : MonoBehaviour
 			Rotate();
 		}
 
-		SetCamera();
+		UpdateAnimatorSpeed();
+		UpdateCameraZoom();
 	}
 
 	// Returns a movement vector for determining the next translation.
@@ -149,8 +158,15 @@ public class SwimController : MonoBehaviour
 		rigidbody.MoveRotation(targetRotation);
 	}
 
-	// Updates the Camera Zoom.
-	private void SetCamera(bool lerp = true)
+	private void UpdateAnimatorSpeed()
+	{
+		float t = rigidbody.velocity.magnitude / forwardSpeed;
+		float animatorSpeed = Mathf.Lerp(animatorSpeedRange.x, animatorSpeedRange.y, t);
+
+		animator.speed = animatorSpeed;
+	}
+
+	private void UpdateCameraZoom(bool lerp = true)
 	{
 		float radius = camMax;
 
