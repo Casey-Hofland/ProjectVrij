@@ -168,6 +168,8 @@ public class SwimController : MonoBehaviour
 
 	private void UpdateCameraZoom(bool lerp = true)
 	{
+        if (cinemachineCamera == null) return;
+
 		float radius = camMax;
 
 		// Casts a ray to the ground to check if the camera should be zoomed in or out (But flawed, raycast is only checking for down)
@@ -198,6 +200,7 @@ public class SwimController : MonoBehaviour
 #if UNITY_EDITOR
 	private void OnDrawGizmos()
 	{
+        /*
 		// Draw the camera circle of influence.
 		UnityEditor.Handles.color = Color.green;
 
@@ -210,6 +213,7 @@ public class SwimController : MonoBehaviour
 		UnityEditor.Handles.DrawWireDisc(transform.position + (Vector3.up * camMax), Vector3.up, camSplineMax);
 		UnityEditor.Handles.DrawWireDisc(transform.position + (Vector3.down * camMax), Vector3.up, camSplineMax);
 		UnityEditor.Handles.DrawWireArc(transform.position, Vector3.right, Vector3.down, 180f, camMax);
+        */
 	}
 #endif
 }
