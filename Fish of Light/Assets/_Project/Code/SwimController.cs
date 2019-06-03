@@ -53,8 +53,6 @@ public class SwimController : MonoBehaviour
 			rigidbody.useGravity = false;
 			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
 			lastMoveVelocity = rigidbody.velocity;
-
-			Rotate();
 		}
 		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||
@@ -71,9 +69,9 @@ public class SwimController : MonoBehaviour
 			Vector3 slowdownVelocity = -lastMoveVelocity * Time.deltaTime / decelerationTime;
 			rigidbody.AddForce(slowdownVelocity, ForceMode.VelocityChange);
 
-			Rotate();
 		}
 
+		Rotate();
 		UpdateAnimatorSpeed();
 	}
 
@@ -92,12 +90,14 @@ public class SwimController : MonoBehaviour
 			aKey = Input.GetKey(KeyCode.A);
 
 		// If one of direction keys is pressed, add direction and speed to the next frame of movement.
+		/*
 		if (qKey != eKey)
 		{
 			translation += Vector3.up * (qKey ? 1 : -1);
 			speed += verticalSpeed;
 			speedDivider++;
 		}
+		*/
 		if (wKey != sKey)
 		{
 			translation += transform.forward * (wKey ? 1 : -1);
@@ -129,21 +129,18 @@ public class SwimController : MonoBehaviour
 	// Rotates the controller to face in line with the camera.
 	private void Rotate()
 	{
-		//float mouseX = Input.GetAxis("Mouse X");
+		float mouseX = Input.GetAxis("Mouse X");
+		Quaternion targetRotation = transform.rotation * Quaternion.Euler(Vector3.up * mouseX);
+		rigidbody.MoveRotation(targetRotation);
 
 		/*
-		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-		targetRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
-
-		rigidbody.MoveRotation(targetRotation);
-		*/
-
 		Vector3 targetDirection = camera.transform.forward;
 
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
 		targetRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
 
 		rigidbody.MoveRotation(targetRotation);
+		*/
 	}
 
 	private void UpdateAnimatorSpeed()
