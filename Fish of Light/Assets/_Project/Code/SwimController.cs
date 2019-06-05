@@ -50,7 +50,7 @@ public class SwimController : MonoBehaviour
 		if (isMoving)
 		{
 			// Move the controller.
-			rigidbody.useGravity = false;
+			//rigidbody.useGravity = false;
 			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
 			lastMoveVelocity = rigidbody.velocity;
 		}
@@ -59,7 +59,7 @@ public class SwimController : MonoBehaviour
 			Mathf.Pow(0.000001f, 2) >= rigidbody.velocity.sqrMagnitude ||
 			lastMoveVelocity.normalized != rigidbody.velocity.normalized)
 		{
-			rigidbody.useGravity = true;
+			//rigidbody.useGravity = true;
 			rigidbody.Sleep();
 			lastMoveVelocity = Vector3.zero;
 		}
