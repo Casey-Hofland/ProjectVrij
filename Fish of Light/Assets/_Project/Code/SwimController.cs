@@ -9,10 +9,11 @@ using UnityEditor;
 public class SwimController : MonoBehaviour
 {
 	[Header("Speed")]
-	[SerializeField] private float forwardSpeed = 3f;
-	[SerializeField] private float sidewaysSpeed = 2f;
-	[SerializeField] private float backwardsSpeed = 1f;
-	[SerializeField] private float verticalSpeed = 2f;
+	[SerializeField] private float forwardSpeed = 30f;
+	[SerializeField] private float sidewaysSpeed = 20f;
+	[SerializeField] private float backwardsSpeed = 10f;
+	[SerializeField] private float verticalSpeed = 20f;
+	[SerializeField] private float pushbackForce = 40f;
 	[SerializeField] private Vector2 animatorSpeedRange = new Vector2(0.5f, 2f);
 
 	[Header("Responsiveness")]
@@ -24,6 +25,7 @@ public class SwimController : MonoBehaviour
 	[SerializeField] private float turnSmoothing = 2f;
 
 	private Vector3 lastMoveVelocity = Vector3.zero;
+	private bool canMove = true;
 
 	private Animator animator;
 	private new Rigidbody rigidbody;
@@ -62,13 +64,13 @@ public class SwimController : MonoBehaviour
 			//rigidbody.useGravity = true;
 			rigidbody.Sleep();
 			lastMoveVelocity = Vector3.zero;
+			canMove = true;
 		}
 		else 
 		{
 			// Slow down the rigidbody.
 			Vector3 slowdownVelocity = -lastMoveVelocity * Time.deltaTime / decelerationTime;
 			rigidbody.AddForce(slowdownVelocity, ForceMode.VelocityChange);
-
 		}
 
 		Rotate();
@@ -78,6 +80,8 @@ public class SwimController : MonoBehaviour
 	// Returns a movement vector for determining the next translation.
 	private Vector3 GetTranslation()
 	{
+		if (!canMove) return Vector3.zero;
+
 		Vector3 translation = new Vector3();
 		float speed = 0f;
 		int speedDivider = 0;
@@ -149,5 +153,13 @@ public class SwimController : MonoBehaviour
 		float animatorSpeed = Mathf.Lerp(animatorSpeedRange.x, animatorSpeedRange.y, t);
 
 		animator.speed = animatorSpeed;
+	}
+
+	public void Hit(Transform hitTransform)
+	{
+		Vector3 awayDir = (transform.position - hitTransform.position).normalized;
+		rigidbody.velocity = awayDir * pushbackForce;
+		lastMoveVelocity = rigidbody.velocity / 2;
+		canMove = false;
 	}
 }

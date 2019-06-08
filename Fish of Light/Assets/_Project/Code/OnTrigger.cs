@@ -40,7 +40,6 @@ public class OnTrigger : MonoBehaviour
 			GameObject go = new GameObject();
 			go.name = clip.name;
 			Transform tf = (soundTransform != null) ? soundTransform : transform;
-			Debug.Log(tf);
 			go.transform.position = tf.position;
 			go.transform.rotation = tf.rotation;
 			AudioSource audioS = go.AddComponent<AudioSource>();
@@ -54,8 +53,11 @@ public class OnTrigger : MonoBehaviour
 		}
 	}
 
+	private void OnDisable() { }
+
 	private void OnTriggerEnter(Collider other)
 	{
+		if (!this.enabled) return;
 		foreach (TriggerEvent triggerEvent in triggerEvents)
 		{
 			StartCoroutine(triggerEvent.ActivateTrigger(transform));
