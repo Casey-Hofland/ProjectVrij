@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 242eb4f437c8be348a5797908fa062a9
+guid: 03ce21394867d834fadd7f129fae5303
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Group17068Mat
-    second: {fileID: 2100000, guid: 3b8f8553c1e3d984e9779ec7b1f0e328, type: 2}
+    second: {fileID: 2100000, guid: 94eecbcca9a9cab4788f6fbcb39b73e3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -39,8 +39,8 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 15
-    meshCompression: 3
+    globalScale: 17
+    meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
@@ -64,8 +64,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 28
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -85,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 15
+    globalScale: 17
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
