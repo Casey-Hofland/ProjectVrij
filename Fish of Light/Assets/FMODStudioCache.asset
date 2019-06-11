@@ -19,6 +19,49 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &-6853444304261537244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMODAssets\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636940567453974267
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
+--- !u!114 &-4617276017376491856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sonar
+  m_EditorClassIdentifier: 
+  Path: event:/Sonar
+  guid: f8aa2f8d83eb0247b069eaaa897d25ef
+  Banks:
+  - {fileID: 5578484261883830049}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &-3063233644856229070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,15 +114,35 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 9182391845790893552}
-  - {fileID: 7168914810541908952}
-  EditorEvents: []
+  - {fileID: 3731389484280599633}
+  - {fileID: 5578484261883830049}
+  EditorEvents:
+  - {fileID: -4617276017376491856}
   MasterBanks:
-  - {fileID: 7168914810541908952}
+  - {fileID: 5578484261883830049}
   StringsBanks:
-  - {fileID: 9182391845790893552}
-  stringsBankWriteTime: 636940567454014305
+  - {fileID: 3731389484280599633}
+  stringsBankWriteTime: 636958570321657571
   cacheVersion: 3
+--- !u!114 &3731389484280599633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMODAssets\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636958570321657571
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 668
+  Exists: 1
 --- !u!114 &4333105745849932329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +162,45 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 672
+  Exists: 1
+--- !u!114 &4585844652205834277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMODAssets\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636940567454014305
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 672
+  Exists: 1
+--- !u!114 &5578484261883830049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMODAssets\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636958570321608078
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 31328
   Exists: 1
 --- !u!114 &7168914810541908952
 MonoBehaviour:
