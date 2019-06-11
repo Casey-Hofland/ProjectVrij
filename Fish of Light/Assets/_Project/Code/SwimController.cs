@@ -26,6 +26,7 @@ public class SwimController : MonoBehaviour
 
 	private Vector3 lastMoveVelocity = Vector3.zero;
 	private bool canMove = true;
+	private float animatorMaxSpeed { get { return Mathf.Max(forwardSpeed, sidewaysSpeed, backwardsSpeed, verticalSpeed); } }
 
 	private Animator animator;
 	private new Rigidbody rigidbody;
@@ -149,7 +150,7 @@ public class SwimController : MonoBehaviour
 
 	private void UpdateAnimatorSpeed()
 	{
-		float t = rigidbody.velocity.magnitude / forwardSpeed;
+		float t = rigidbody.velocity.magnitude / animatorMaxSpeed;
 		float animatorSpeed = Mathf.Lerp(animatorSpeedRange.x, animatorSpeedRange.y, t);
 
 		animator.speed = animatorSpeed;
