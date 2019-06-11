@@ -19,6 +19,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &-7880393222552612121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sonarLight
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sonarLight
+  guid: dff586ca5e7cd64e987d3e53aab1ed48
+  Banks:
+  - {fileID: 1852283396248446521}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1830
 --- !u!114 &-7087337467766299313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +105,52 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &-6049286047695174911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/rockImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/rockImpact
+  guid: ecceba3129faa74f846d442160a9ec81
+  Banks:
+  - {fileID: 1852283396248446521}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8585
+--- !u!114 &-5060276769841949479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerSwim
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerSwim
+  guid: 0246d361bd46654aaca0c6316e6974bf
+  Banks:
+  - {fileID: 2021545174105785852}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1320
 --- !u!114 &-4617276017376491856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +174,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1800
+--- !u!114 &-4004976039123205861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636958914182873931
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 818
+  Exists: 1
 --- !u!114 &-3573845642990255793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +213,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 120128
   Exists: 1
+--- !u!114 &-3295670949975849601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerSwim
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerSwim
+  guid: 0246d361bd46654aaca0c6316e6974bf
+  Banks:
+  - {fileID: 1852283396248446521}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1320
 --- !u!114 &-3063233644856229070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +254,48 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 672
+  Exists: 1
+--- !u!114 &-2649829665618003657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/rockImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/rockImpact
+  guid: ecceba3129faa74f846d442160a9ec81
+  Banks:
+  - {fileID: 2021545174105785852}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8585
+--- !u!114 &-1918188909993306212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636958914182873931
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 818
   Exists: 1
 --- !u!114 &-1215459659511406395
 MonoBehaviour:
@@ -167,6 +320,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
+--- !u!114 &-825629691349690232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636958914182814373
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 120256
+  Exists: 1
 --- !u!114 &-784386317985132329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,17 +392,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -108921745733302091}
-  - {fileID: -3573845642990255793}
+  - {fileID: -1918188909993306212}
+  - {fileID: -825629691349690232}
   EditorEvents:
-  - {fileID: 3477148227525268679}
-  - {fileID: -6999290471401466636}
-  - {fileID: 330822711771380927}
+  - {fileID: 1316430176776905420}
+  - {fileID: 3711172541505476997}
+  - {fileID: 5688719480601445313}
   MasterBanks:
-  - {fileID: -3573845642990255793}
+  - {fileID: -825629691349690232}
   StringsBanks:
-  - {fileID: -108921745733302091}
-  stringsBankWriteTime: 636958801852708020
+  - {fileID: -1918188909993306212}
+  stringsBankWriteTime: 636958914182873931
   cacheVersion: 3
 --- !u!114 &330822711771380927
 MonoBehaviour:
@@ -254,6 +427,92 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8585
+--- !u!114 &756790804688561998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sonarLight
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sonarLight
+  guid: dff586ca5e7cd64e987d3e53aab1ed48
+  Banks:
+  - {fileID: 2021545174105785852}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1830
+--- !u!114 &1316430176776905420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerSwim
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerSwim
+  guid: 0246d361bd46654aaca0c6316e6974bf
+  Banks:
+  - {fileID: -825629691349690232}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1320
+--- !u!114 &1852283396248446521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636958914182814373
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 120256
+  Exists: 1
+--- !u!114 &2021545174105785852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636958914182814373
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 120256
+  Exists: 1
 --- !u!114 &3477148227525268679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +536,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1320
+--- !u!114 &3711172541505476997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sonarLight
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sonarLight
+  guid: dff586ca5e7cd64e987d3e53aab1ed48
+  Banks:
+  - {fileID: -825629691349690232}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1830
 --- !u!114 &3731389484280599633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +636,48 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 31328
+  Exists: 1
+--- !u!114 &5688719480601445313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/rockImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/rockImpact
+  guid: ecceba3129faa74f846d442160a9ec81
+  Banks:
+  - {fileID: -825629691349690232}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8585
+--- !u!114 &6417490550314529808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636958914182873931
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 818
   Exists: 1
 --- !u!114 &6619486925173172543
 MonoBehaviour:

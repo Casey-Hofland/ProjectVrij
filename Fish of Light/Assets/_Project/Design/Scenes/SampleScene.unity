@@ -2819,7 +2819,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875564750}
-  m_LocalRotation: {x: 0.07250057, y: -0.15361285, z: 0.011301973, w: 0.985403}
+  m_LocalRotation: {x: 0.07252324, y: -0.15162374, z: 0.011155626, w: 0.98571104}
   m_LocalPosition: {x: 462.5, y: 52.7, z: 463.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4189,7 +4189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Sonar
+  Event: event:/SFX/sonarLight
   PlayEvent: 3
   StopEvent: 0
   CollisionTag: 
@@ -6571,6 +6571,29 @@ MonoBehaviour:
   camRadiusRange: {x: 10, y: 20}
   camSplineRadiusMultiplier: 0.25
   zoomSmoothing: 2
+--- !u!114 &2035880779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035880777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/playerSwim
+  PlayEvent: 11
+  StopEvent: 12
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2037001687
 GameObject:
   m_ObjectHideFlags: 0
@@ -7207,22 +7230,22 @@ PrefabInstance:
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07250057
+      value: 0.07252324
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.15361285
+      value: -0.15162374
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.011301973
+      value: 0.011155626
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.985403
+      value: 0.98571104
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}

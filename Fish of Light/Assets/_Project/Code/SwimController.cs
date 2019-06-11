@@ -1,6 +1,7 @@
 ﻿using Cinemachine;
 using UnityEngine;
 using UnityEditor;
+using FMODUnity;
 
 [DisallowMultipleComponent]
 [CanEditMultipleObjects]
@@ -43,6 +44,11 @@ public class SwimController : MonoBehaviour
 		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
 	}
 
+	private void Start()
+	{
+		Debug.Log(GetComponent<StudioEventEmitter>().Event.Length);
+	}
+
 	private void FixedUpdate()
 	{
 		Vector3 translation = GetTranslation();
@@ -55,7 +61,9 @@ public class SwimController : MonoBehaviour
 			//rigidbody.useGravity = false;
 			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
 			lastMoveVelocity = rigidbody.velocity;
-			GetComponent<FMODUnity.StudioEventEmitter>().Play();
+			
+			// REMOVE
+			//GetComponent<FMODUnity.StudioEventEmitter>().Play();
 		}
 		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||
