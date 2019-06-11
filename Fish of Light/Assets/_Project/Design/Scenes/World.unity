@@ -3500,6 +3500,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 788286334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &815779723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8437716606111640039, guid: 5a3e3b8e53d347049a323dc98e3f8de8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567916652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &815779728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815779723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/sonarLight
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &821562653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3833,7 +3862,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-53620
+  m_Name: pb_Mesh20652
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8963,6 +8992,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1933561357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1944210283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1627775186377384090, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+    type: 3}
+  m_PrefabInstance: {fileID: 773045649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944210284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944210283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/playerSwim
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2001083622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9460,7 +9518,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-74256
+  m_Name: pb_Mesh-6870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

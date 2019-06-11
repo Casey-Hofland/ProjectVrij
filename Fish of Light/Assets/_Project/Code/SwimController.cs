@@ -55,6 +55,7 @@ public class SwimController : MonoBehaviour
 			//rigidbody.useGravity = false;
 			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
 			lastMoveVelocity = rigidbody.velocity;
+			GetComponent<FMODUnity.StudioEventEmitter>().Play();
 		}
 		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\FMODAssets\Sound Manager.fspro
-  SourceProjectPathUnformatted: Assets\FMODAssets\Sound Manager.fspro
-  SourceBankPathUnformatted: Assets\FMODAssets\Build
+  sourceProjectPath: Assets\FMod\underwater_game.fspro
+  SourceProjectPathUnformatted: Assets\FMod\underwater_game.fspro
+  SourceBankPathUnformatted: Assets\FMod\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
