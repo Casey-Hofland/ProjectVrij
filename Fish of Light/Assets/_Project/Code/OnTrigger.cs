@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OnTrigger : MonoBehaviour
@@ -13,13 +12,6 @@ public class OnTrigger : MonoBehaviour
 		[Header("Animation")]
 		[SerializeField] private Animator animator = null;
 		[SerializeField] private string triggerName = "OnTriggerEnter";
-
-		[Header("Sound")]
-		[SerializeField] private AudioClip clip = null;
-		[Tooltip("Specifies if the sound should be 2D (plays at set volume no matter how far away you are).")]
-		[SerializeField] private bool sound2D = true;
-		[Tooltip("Defaults to this gameobjects' transform if left null.")]
-		[SerializeField] private Transform soundTransform = null;
 
 		[Header("Event")]
 		[SerializeField] private float delay = 0f;
@@ -37,18 +29,6 @@ public class OnTrigger : MonoBehaviour
 
 			animator.SetTrigger(triggerName);
 
-			GameObject go = new GameObject();
-			go.name = clip.name;
-			Transform tf = (soundTransform != null) ? soundTransform : transform;
-			go.transform.position = tf.position;
-			go.transform.rotation = tf.rotation;
-			AudioSource audioS = go.AddComponent<AudioSource>();
-			audioS.spatialBlend = (sound2D) ? 0 : 1;
-			audioS.PlayOneShot(clip);
-
-			yield return new WaitForSeconds(clip.length);
-
-			Destroy(go);
 			activateTrigger = repeat;
 		}
 	}

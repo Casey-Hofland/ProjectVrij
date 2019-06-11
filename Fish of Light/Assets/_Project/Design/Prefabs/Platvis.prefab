@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 1627775186377385831}
   - component: {fileID: 1627775186377385828}
   - component: {fileID: 1627775186377385829}
-  - component: {fileID: 5425815643989560702}
   m_Layer: 8
   m_Name: Platvis
   m_TagString: Untagged
@@ -210,6 +209,7 @@ MonoBehaviour:
   sidewaysSpeed: 15
   backwardsSpeed: 10
   verticalSpeed: 15
+  pushbackForce: 40
   animatorSpeedRange: {x: 0.5, y: 2}
   accelerationTime: 5
   decelerationTime: 0.6
@@ -227,14 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
---- !u!81 &5425815643989560702
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627775186377384090}
-  m_Enabled: 1
 --- !u!1 &1740448347246629535
 GameObject:
   m_ObjectHideFlags: 0
