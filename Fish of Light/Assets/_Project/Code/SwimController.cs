@@ -41,7 +41,6 @@ public class SwimController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 
 		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
-		Debug.LogWarning("The AnimtorSpeedRange Lerping assumes forwardSpeed is the maximum speed");
 	}
 
 	private void FixedUpdate()
