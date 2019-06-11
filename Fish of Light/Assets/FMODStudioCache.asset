@@ -119,11 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Beheerder\Documents\Audio Gigs\Sound\Underwater_Game_2019\ProjectVrij\Fish
     of Light\Assets\FMod\Build\Desktop\Master Bank.bank
-  lastModified: 636958779940325325
+  lastModified: 636958801852668176
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 63968
+    Value: 120128
   Exists: 1
 --- !u!114 &-3063233644856229070
 MonoBehaviour:
@@ -200,11 +200,11 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636958779940375161
+  lastModified: 636958801852708020
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 778
+    Value: 818
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -224,12 +224,36 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 3477148227525268679}
   - {fileID: -6999290471401466636}
+  - {fileID: 330822711771380927}
   MasterBanks:
   - {fileID: -3573845642990255793}
   StringsBanks:
   - {fileID: -108921745733302091}
-  stringsBankWriteTime: 636958779940375161
+  stringsBankWriteTime: 636958801852708020
   cacheVersion: 3
+--- !u!114 &330822711771380927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/rockImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/rockImpact
+  guid: ecceba3129faa74f846d442160a9ec81
+  Banks:
+  - {fileID: -3573845642990255793}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8585
 --- !u!114 &3477148227525268679
 MonoBehaviour:
   m_ObjectHideFlags: 0
