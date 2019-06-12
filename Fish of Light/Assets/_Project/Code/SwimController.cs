@@ -1,7 +1,7 @@
 ﻿using Cinemachine;
+using FMODUnity;
 using UnityEngine;
 using UnityEditor;
-using FMODUnity;
 
 [DisallowMultipleComponent]
 [CanEditMultipleObjects]
@@ -32,118 +32,98 @@ public class SwimController : MonoBehaviour
 	private Animator animator;
 	private new Rigidbody rigidbody;
 	private new Camera camera;
+	private StudioEventEmitter eventEmitter;
 
 	private void Awake()
 	{
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody>();
 		camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
-		Cursor.lockState = CursorLockMode.Locked;
+		eventEmitter = GetComponent<StudioEventEmitter>();
 
 		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
 	}
 
-	private void Start()
-	{
-		Debug.Log(GetComponent<StudioEventEmitter>().Event.Length);
-	}
-
 	private void FixedUpdate()
 	{
-		Vector3 translation = GetTranslation();
+		UpdateAnimatorSpeed();
+	}
 
-		bool isMoving = translation != Vector3.zero;
-
-		if (isMoving)
+	public void Move(Vector3 translation)
+	{
+		if (canMove && translation != Vector3.zero)
 		{
-			// Move the controller.
-			//rigidbody.useGravity = false;
-			rigidbody.velocity = translation; // Flawed way of setting velocity : physics calculations might be off.
+			rigidbody.velocity = translation;
 			lastMoveVelocity = rigidbody.velocity;
-			
-			// REMOVE
-			//GetComponent<FMODUnity.StudioEventEmitter>().Play();
 		}
-		// Check if the rigidboy has stopped moving and if so reset the rigidbody.
 		else if (decelerationTime <= 0 ||
 			Mathf.Pow(0.000001f, 2) >= rigidbody.velocity.sqrMagnitude ||
 			lastMoveVelocity.normalized != rigidbody.velocity.normalized)
 		{
-			//rigidbody.useGravity = true;
-			rigidbody.Sleep();
-			lastMoveVelocity = Vector3.zero;
+			rigidbody.velocity = Vector3.zero;
+			lastMoveVelocity = rigidbody.velocity;
 			canMove = true;
 		}
-		else 
+		else
 		{
 			// Slow down the rigidbody.
 			Vector3 slowdownVelocity = -lastMoveVelocity * Time.deltaTime / decelerationTime;
 			rigidbody.AddForce(slowdownVelocity, ForceMode.VelocityChange);
 		}
-
-		Rotate();
-		UpdateAnimatorSpeed();
 	}
 
-	// Returns a movement vector for determining the next translation.
-	private Vector3 GetTranslation()
+	public void Move(Vector3 translation, bool[] useSpeed)
 	{
-		if (!canMove) return Vector3.zero;
+		if (!canMove)
+		{
+			Move(translation);
+			return;
+		}
 
-		Vector3 translation = new Vector3();
-		float speed = 0f;
+		float speed = 0;
 		int speedDivider = 0;
 
-		bool qKey = Input.GetKey(KeyCode.Q),
-			eKey = Input.GetKey(KeyCode.E),
-			wKey = Input.GetKey(KeyCode.W),
-			sKey = Input.GetKey(KeyCode.S),
-			dKey = Input.GetKey(KeyCode.D),
-			aKey = Input.GetKey(KeyCode.A);
-
-		// If one of direction keys is pressed, add direction and speed to the next frame of movement.
-		/*
-		if (qKey != eKey)
+		if (useSpeed[0])
 		{
-			translation += Vector3.up * (qKey ? 1 : -1);
 			speed += verticalSpeed;
 			speedDivider++;
 		}
-		*/
-		if (wKey != sKey)
+		if (useSpeed[1])
 		{
-			translation += transform.forward * (wKey ? 1 : -1);
-			speed += (wKey ? forwardSpeed : backwardsSpeed);
+			speed += forwardSpeed;
 			speedDivider++;
 		}
-		if (dKey != aKey)
+		else if (useSpeed[2])
 		{
-			translation += transform.right * (dKey ? 1 : -1);
+			speed += backwardsSpeed;
+			speedDivider++;
+		}
+		if (useSpeed[3])
+		{
 			speed += sidewaysSpeed;
 			speedDivider++;
 		}
 
 		if (speedDivider == 0)
-			return translation;
+		{
+			Move(translation);
+			return;
+		}
 
-		// Normalize the direction and speed.
-		translation.Normalize();
-		speed /= speedDivider;
+		speed /= (float)speedDivider;
 
 		// Lerp the target speed according to the current speed.
 		float acceleratedTime = rigidbody.velocity.magnitude / speed * Time.deltaTime + Time.deltaTime;
 		float t = (acceleratedTime <= accelerationTime ? acceleratedTime / accelerationTime : accelerationTime / acceleratedTime);
 		translation *= Mathf.Lerp(rigidbody.velocity.magnitude, speed, t);
 
-		return translation;
+		Move(translation);
 	}
 
 	// Rotates the controller to face in line with the camera.
-	private void Rotate()
+	public void Rotate(float axis)
 	{
-		float mouseX = Input.GetAxis("Mouse X");
-		Quaternion targetRotation = transform.rotation * Quaternion.Euler(Vector3.up * mouseX);
+		Quaternion targetRotation = transform.rotation * Quaternion.Euler(Vector3.up * axis);
 		rigidbody.MoveRotation(targetRotation);
 
 		/*
@@ -162,6 +142,14 @@ public class SwimController : MonoBehaviour
 		float animatorSpeed = Mathf.Lerp(animatorSpeedRange.x, animatorSpeedRange.y, t);
 
 		animator.speed = animatorSpeed;
+	}
+
+	public void PlaySound()
+	{
+		if (eventEmitter.isActiveAndEnabled)
+		{
+			eventEmitter.Play();
+		}
 	}
 
 	public void Hit(Transform hitTransform)

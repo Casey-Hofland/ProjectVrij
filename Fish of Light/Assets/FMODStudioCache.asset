@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636958914182873931
+  lastModified: 636959032071346348
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -334,11 +334,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636958914182814373
+  lastModified: 636959032071297452
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 120256
+    Value: 120128
   Exists: 1
 --- !u!114 &-784386317985132329
 MonoBehaviour:
@@ -402,7 +402,7 @@ MonoBehaviour:
   - {fileID: -825629691349690232}
   StringsBanks:
   - {fileID: -1918188909993306212}
-  stringsBankWriteTime: 636958914182873931
+  stringsBankWriteTime: 636959032071346348
   cacheVersion: 3
 --- !u!114 &330822711771380927
 MonoBehaviour:
@@ -468,7 +468,7 @@ MonoBehaviour:
   - {fileID: -825629691349690232}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

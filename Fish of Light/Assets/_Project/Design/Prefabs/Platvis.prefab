@@ -133,8 +133,10 @@ GameObject:
   - component: {fileID: 2363366368183505545}
   - component: {fileID: 5640299973040570355}
   - component: {fileID: 1627775186377385831}
+  - component: {fileID: 1451654529443158373}
   - component: {fileID: 1627775186377385828}
   - component: {fileID: 1627775186377385829}
+  - component: {fileID: 6929505324582301245}
   m_Layer: 8
   m_Name: Platvis
   m_TagString: Untagged
@@ -194,6 +196,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1451654529443158373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627775186377384090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f65cd8a4f13054e95cc20763944ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1627775186377385828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +242,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
+--- !u!114 &6929505324582301245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627775186377384090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/playerSwim
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1740448347246629535
 GameObject:
   m_ObjectHideFlags: 0
