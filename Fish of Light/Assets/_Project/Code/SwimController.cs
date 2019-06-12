@@ -1,6 +1,7 @@
 ﻿using Cinemachine;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Animator))]
@@ -31,6 +32,10 @@ public class SwimController : MonoBehaviour
 	private new Rigidbody rigidbody;
 	private new Camera camera;
 	private StudioEventEmitter eventEmitter;
+
+	[SerializeField] private VisualEffect finLeftVFX;
+	[SerializeField] private VisualEffect finRightVFX;
+	[SerializeField] private VisualEffect tailVFX;
 
 	private void Start()
 	{
@@ -148,6 +153,19 @@ public class SwimController : MonoBehaviour
 		{
 			eventEmitter.Play();
 		}
+	}
+
+	public void FinStroke()
+	{
+		PlaySound();
+		finLeftVFX.SendEvent("OnStroke");
+		finRightVFX.SendEvent("OnStroke");
+	}
+
+	public void TailStroke()
+	{
+		PlaySound();
+		tailVFX.SendEvent("OnStroke");
 	}
 
 	public void Hit(Transform hitTransform)
