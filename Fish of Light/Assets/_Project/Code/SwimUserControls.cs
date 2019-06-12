@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 [DisallowMultipleComponent]
-[UnityEditor.CanEditMultipleObjects]
 [RequireComponent(typeof(SwimController))]
 public class SwimUserControls : MonoBehaviour
 {

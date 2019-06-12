@@ -1,10 +1,8 @@
 ﻿using Cinemachine;
 using FMODUnity;
 using UnityEngine;
-using UnityEditor;
 
 [DisallowMultipleComponent]
-[CanEditMultipleObjects]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody))]
 public class SwimController : MonoBehaviour
