@@ -359,7 +359,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 134217730
-  m_Range: 100
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -427,7 +427,7 @@ MonoBehaviour:
   enableSpotReflector: 0
   luxAtDistance: 1
   m_InnerSpotPercent: 0
-  lightDimmer: 0.5
+  lightDimmer: 1
   m_VolumetricDimmer: 1
   lightUnit: 4
   sunDiskSize: 1
@@ -441,7 +441,7 @@ MonoBehaviour:
   shapeWidth: 0.5
   shapeHeight: 0.5
   aspectRatio: 1
-  shapeRadius: 6000
+  shapeRadius: 4000
   maxSmoothness: 0
   applyRangeAttenuation: 1
   useOldInspector: 0
