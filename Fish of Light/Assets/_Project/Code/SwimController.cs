@@ -34,7 +34,7 @@ public class SwimController : MonoBehaviour
 	private new Camera camera;
 	private StudioEventEmitter eventEmitter;
 
-	private void Awake()
+	private void Start()
 	{
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody>();
