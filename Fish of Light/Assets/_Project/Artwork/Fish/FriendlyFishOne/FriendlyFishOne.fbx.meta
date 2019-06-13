@@ -47,7 +47,7 @@ ModelImporter:
       lastFrame: 99
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 4.44
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -72,7 +72,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 0.5
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1

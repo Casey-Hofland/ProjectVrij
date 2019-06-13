@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SwimmingFriendlyFish
+  m_Name: FriendlyFishSwimming
   m_Speed: 0.8
   m_CycleOffset: 0
   m_Transitions:
@@ -61,7 +61,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7996025008449128838}
-    m_Position: {x: 410.5199, y: 272.94492, z: 0}
+    m_Position: {x: 270, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1100096471979543044}
     m_Position: {x: 539.343, y: 176.3276, z: 0}
