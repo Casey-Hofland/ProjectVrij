@@ -2664,8 +2664,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 502730470}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1966326374}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3557,11 +3557,11 @@ RectTransform:
   m_Father: {fileID: 502730470}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0.25}
+  m_AnchorMin: {x: 0.1, y: 0.25}
   m_AnchorMax: {x: 0.5, y: 0.4}
-  m_AnchoredPosition: {x: -100, y: 10}
-  m_SizeDelta: {x: 50, y: -20}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -43, y: 0}
+  m_SizeDelta: {x: -14, y: -20.000004}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226079953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3579,7 +3579,7 @@ MonoBehaviour:
   StartRotation: {x: 0, y: 0, z: 0}
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
-  AllowMultipleClicks: 0
+  AllowMultipleClicks: 1
   ButtonCategory: General
   ButtonName: Start
   ClickMode: 0
@@ -3587,9 +3587,9 @@ MonoBehaviour:
   DisableButtonBetweenClicksInterval: 0.2
   DoubleClickRegisterInterval: 0.2
   InputData:
-    EnableAlternateInputs: 1
-    InputMode: 2
-    KeyCode: 13
+    EnableAlternateInputs: 0
+    InputMode: 1
+    KeyCode: 8
     KeyCodeAlt: 32
     VirtualButtonName: Submit
     VirtualButtonNameAlt: Jump
@@ -4455,8 +4455,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Button Tap
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -4510,12 +4510,12 @@ MonoBehaviour:
         Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.1, y: -0.1, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 0
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -4528,7 +4528,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.1
       Fade:
         AnimationType: 4
         Enabled: 0
@@ -4637,7 +4637,7 @@ MonoBehaviour:
           m_RotationOrder: 4
         StartDelay: 0
         Duration: 1
-    TriggerEventsAfterAnimation: 0
+    TriggerEventsAfterAnimation: 1
     m_behaviorType: 0
   OnDoubleClick:
     Animators: []
@@ -9135,7 +9135,7 @@ PrefabInstance:
     - target: {fileID: 1019158083848525993, guid: bc8313c345a68d64ab932ff2f6231727,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1019158083848525992, guid: bc8313c345a68d64ab932ff2f6231727,
         type: 3}
@@ -10813,7 +10813,6 @@ GameObject:
   - component: {fileID: 502730474}
   - component: {fileID: 502730473}
   - component: {fileID: 502730472}
-  - component: {fileID: 502730471}
   m_Layer: 0
   m_Name: View - Main Menu
   m_TagString: Untagged
@@ -10842,35 +10841,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &502730471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502730469}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!222 &502730472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11216,7 +11186,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0
+        StartDelay: 1
         Duration: 1
       Rotate:
         AnimationType: 1
@@ -11278,7 +11248,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0
+        StartDelay: 1
         Duration: 4
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
@@ -11323,8 +11293,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Music
+        SoundName: Moon Drops
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -11666,7 +11636,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545449303
 GameObject:
@@ -11696,7 +11666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553080847
 GameObject:
@@ -15132,7 +15102,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 23.45
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15149,7 +15119,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -18945,7 +18915,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215505629}
-  m_LocalRotation: {x: 0.07317102, y: -0.07453358, z: 0.005483696, w: 0.99451536}
+  m_LocalRotation: {x: 0.07317034, y: -0.074655145, z: 0.005492636, w: 0.99450624}
   m_LocalPosition: {x: 0, y: 12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20870,22 +20840,22 @@ PrefabInstance:
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07317102
+      value: 0.07317034
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.07453358
+      value: -0.074655145
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005483696
+      value: 0.005492636
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99451536
+      value: 0.99450624
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
@@ -21836,7 +21806,7 @@ PrefabInstance:
     - target: {fileID: 8279057654741584565, guid: dc4dfffdb4467fd4ba23987478717640,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8279057654741584566, guid: dc4dfffdb4467fd4ba23987478717640,
         type: 3}
@@ -22908,7 +22878,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 23.45
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -22925,7 +22895,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -24777,6 +24747,7 @@ GameObject:
   - component: {fileID: 1587399409}
   - component: {fileID: 1587399408}
   - component: {fileID: 1587399407}
+  - component: {fileID: 1587399411}
   m_Layer: 0
   m_Name: Button - Quit
   m_TagString: Untagged
@@ -24799,11 +24770,11 @@ RectTransform:
   m_Father: {fileID: 502730470}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0.1}
+  m_AnchorMin: {x: 0.1, y: 0.1}
   m_AnchorMax: {x: 0.5, y: 0.25}
-  m_AnchoredPosition: {x: -100, y: 10}
-  m_SizeDelta: {x: 50, y: -20}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -43, y: 0}
+  m_SizeDelta: {x: -14, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1587399407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24829,11 +24800,11 @@ MonoBehaviour:
   DisableButtonBetweenClicksInterval: 0.2
   DoubleClickRegisterInterval: 0.2
   InputData:
-    EnableAlternateInputs: 1
+    EnableAlternateInputs: 0
     InputMode: 2
     KeyCode: 13
     KeyCodeAlt: 32
-    VirtualButtonName: Submit
+    VirtualButtonName: Cancel
     VirtualButtonNameAlt: Jump
   LongClickRegisterInterval: 0.5
   OnPointerEnter:
@@ -25697,8 +25668,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Bubble Pop
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -25752,12 +25723,12 @@ MonoBehaviour:
         Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.1, y: -0.1, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 0
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -25770,7 +25741,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.1
       Fade:
         AnimationType: 4
         Enabled: 0
@@ -25879,7 +25850,7 @@ MonoBehaviour:
           m_RotationOrder: 4
         StartDelay: 0
         Duration: 1
-    TriggerEventsAfterAnimation: 0
+    TriggerEventsAfterAnimation: 1
     m_behaviorType: 0
   OnDoubleClick:
     Animators: []
@@ -26990,6 +26961,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587399405}
   m_CullTransparentMesh: 0
+--- !u!225 &1587399411
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587399405}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1588573295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31514,7 +31497,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 158125668}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32230,7 +32214,7 @@ PrefabInstance:
     - target: {fileID: 4527582243815469478, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 4527582243815469478, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
