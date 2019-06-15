@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2880499102888631287}
   - component: {fileID: 4386751382174115992}
   - component: {fileID: 6411464357784009855}
+  - component: {fileID: 8461462151640472745}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -97,7 +98,23 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: distanceToPlayer
+    Value: 0
   OverrideAttenuation: 1
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 100
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 50
+--- !u!114 &8461462151640472745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433877741693910730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b105488c7f40d8c45a520a2288f29f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  studioEvent: {fileID: 6411464357784009855}
+  target: {fileID: 0}
