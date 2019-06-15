@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636959627002200003
+  lastModified: 636962055269338417
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -413,16 +413,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -1918188909993306212}
-  - {fileID: -1125468871164286052}
+  - {fileID: 1255170741344303518}
   EditorEvents:
   - {fileID: 1316430176776905420}
   - {fileID: 3711172541505476997}
   - {fileID: 5688719480601445313}
   MasterBanks:
-  - {fileID: -1125468871164286052}
+  - {fileID: 1255170741344303518}
   StringsBanks:
   - {fileID: -1918188909993306212}
-  stringsBankWriteTime: 636959627002200003
+  stringsBankWriteTime: 636962055269338417
   cacheVersion: 3
 --- !u!114 &330822711771380927
 MonoBehaviour:
@@ -470,6 +470,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
+--- !u!114 &1255170741344303518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636962055269288945
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 120128
+  Exists: 1
 --- !u!114 &1316430176776905420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +505,7 @@ MonoBehaviour:
   Path: event:/SFX/playerSwim
   guid: 0246d361bd46654aaca0c6316e6974bf
   Banks:
-  - {fileID: -1125468871164286052}
+  - {fileID: 1255170741344303518}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -571,7 +591,7 @@ MonoBehaviour:
   Path: event:/SFX/sonarLight
   guid: dff586ca5e7cd64e987d3e53aab1ed48
   Banks:
-  - {fileID: -1125468871164286052}
+  - {fileID: 1255170741344303518}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -672,7 +692,7 @@ MonoBehaviour:
   Path: event:/SFX/rockImpact
   guid: ecceba3129faa74f846d442160a9ec81
   Banks:
-  - {fileID: -1125468871164286052}
+  - {fileID: 1255170741344303518}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
