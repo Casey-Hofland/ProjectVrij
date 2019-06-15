@@ -29,7 +29,7 @@
     <object class="MixerBusPanner" id="{5255fd45-1fe7-4e5b-938c-d7cf3f9aca80}"/>
     <object class="SFXReverbEffect" id="{b4d03e68-d6c8-4123-a6e6-0eee3d788982}">
         <property name="wetLevel">
-            <value>0</value>
+            <value>10</value>
         </property>
         <property name="dryLevel">
             <value>-80</value>
