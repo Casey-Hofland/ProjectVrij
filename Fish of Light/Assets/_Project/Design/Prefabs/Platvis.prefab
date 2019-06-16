@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 1627775186377385831}
   - component: {fileID: 1451654529443158373}
   - component: {fileID: 1627775186377385828}
+  - component: {fileID: 1854517746255740336}
   - component: {fileID: 1627775186377385829}
   - component: {fileID: 6929505324582301245}
   m_Layer: 8
@@ -338,6 +339,14 @@ MonoBehaviour:
   finLeftVFX: {fileID: 6521350846902873528}
   finRightVFX: {fileID: 2891493957693580704}
   tailVFX: {fileID: 7843952458566348239}
+--- !u!81 &1854517746255740336
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627775186377384090}
+  m_Enabled: 1
 --- !u!114 &1627775186377385829
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,4 +16,6 @@ MonoBehaviour:
   DatabaseType: 0
   Names:
   - Back
+  - Quit
+  - Start
   - Unnamed
