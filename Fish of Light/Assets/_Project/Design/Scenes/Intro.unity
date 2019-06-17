@@ -2811,16 +2811,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: 2819481016307976881, guid: 57fef23747761a8409fd89652c52f8c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8461462151640472745, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 773045650}
+    - target: {fileID: 2819481016307976881, guid: 57fef23747761a8409fd89652c52f8c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fef23747761a8409fd89652c52f8c7, type: 3}
 --- !u!1 &160422292 stripped
@@ -10747,11 +10747,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1627775186377385831, guid: 3214f85a1cd90c54b9b334cf3fce7337,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 116
-      objectReference: {fileID: 0}
     - target: {fileID: 522306040487194725, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
       propertyPath: m_Intensity
@@ -10766,6 +10761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: displayLightIntensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627775186377385831, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3214f85a1cd90c54b9b334cf3fce7337, type: 3}

@@ -246,7 +246,7 @@ MonoBehaviour:
   shapeWidth: 0.5
   shapeHeight: 0.5
   aspectRatio: 1
-  shapeRadius: 1000
+  shapeRadius: 3000
   maxSmoothness: 0.99
   applyRangeAttenuation: 1
   useOldInspector: 0
