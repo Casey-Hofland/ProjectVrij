@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4386751382174115992}
   - component: {fileID: 6411464357784009855}
   - component: {fileID: 8461462151640472745}
+  - component: {fileID: 2182734856481236391}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -119,6 +120,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   studioEvent: {fileID: 6411464357784009855}
   target: {fileID: 0}
+--- !u!95 &2182734856481236391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433877741693910730}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78eab6265b39bd545a38d34b4d642f7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2819481016307976881
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +183,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 536870900
+  m_Intensity: 33554432
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -253,7 +273,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 32
+  displayLightIntensity: 28
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
