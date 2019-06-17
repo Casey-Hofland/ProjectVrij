@@ -1535,34 +1535,38 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 773045650}
-    - target: {fileID: 3638774186931595812, guid: 57fef23747761a8409fd89652c52f8c7,
+    - target: {fileID: 2819481016307976881, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
-      propertyPath: m_Intensity
-      value: 536870900
-      objectReference: {fileID: 0}
-    - target: {fileID: 3638774186931595812, guid: 57fef23747761a8409fd89652c52f8c7,
-        type: 3}
-      propertyPath: m_Range
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8406518393012703913, guid: 57fef23747761a8409fd89652c52f8c7,
-        type: 3}
-      propertyPath: shapeRadius
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8406518393012703913, guid: 57fef23747761a8409fd89652c52f8c7,
-        type: 3}
-      propertyPath: displayLightIntensity
-      value: 32
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fef23747761a8409fd89652c52f8c7, type: 3}
---- !u!95 &160422293 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2182734856481236391, guid: 57fef23747761a8409fd89652c52f8c7,
+--- !u!1 &160422292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433877741693910730, guid: 57fef23747761a8409fd89652c52f8c7,
     type: 3}
   m_PrefabInstance: {fileID: 160422291}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &160422293
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160422292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78eab6265b39bd545a38d34b4d642f7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!43 &186084000
 Mesh:
   m_ObjectHideFlags: 0
@@ -9462,20 +9466,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1627775186377385828, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+    - target: {fileID: 522306040487194725, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
-      propertyPath: forwardSpeed
-      value: 10
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1627775186377385828, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+    - target: {fileID: 522306040487194725, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
-      propertyPath: sidewaysSpeed
-      value: 7
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1627775186377385828, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+    - target: {fileID: 8113676228556487054, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
-      propertyPath: backwardsSpeed
-      value: 10
+      propertyPath: displayLightIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627775186377385831, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3214f85a1cd90c54b9b334cf3fce7337, type: 3}
@@ -30004,6 +30013,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940197574}
   m_Mesh: {fileID: 100538766}
+--- !u!1 &1944210283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1627775186377384090, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+    type: 3}
+  m_PrefabInstance: {fileID: 773045649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944210284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944210283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/playerSwim
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &2000094091
 Mesh:
   m_ObjectHideFlags: 0

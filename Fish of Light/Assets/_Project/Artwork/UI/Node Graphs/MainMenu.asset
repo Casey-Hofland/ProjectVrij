@@ -390,7 +390,7 @@ MonoBehaviour:
   AllowSceneActivation: 1
   SceneActivationDelay: 0.2
   SceneBuildIndex: 0
-  SceneName: SampleScene
+  SceneName: Intro
 --- !u!114 &4239267186605258211
 MonoBehaviour:
   m_ObjectHideFlags: 1
