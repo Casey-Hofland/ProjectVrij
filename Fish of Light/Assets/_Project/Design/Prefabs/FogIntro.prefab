@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1672221634317809856}
   - component: {fileID: 1672221634317809871}
   - component: {fileID: 1672221634317809870}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FogIntro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
