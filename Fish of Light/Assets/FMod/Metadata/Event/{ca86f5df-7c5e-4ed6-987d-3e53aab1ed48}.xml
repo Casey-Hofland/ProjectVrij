@@ -207,8 +207,20 @@
     </object>
     <object class="MixerBusFader" id="{a93af88e-bc63-4558-b7ba-8f227864e695}"/>
     <object class="SFXReverbEffect" id="{4c65777a-b50d-41e9-9a03-2fb3761f3fd8}">
-        <property name="dryLevel">
-            <value>10</value>
+        <property name="decayTime">
+            <value>3900</value>
+        </property>
+        <property name="lateDelay">
+            <value>29</value>
+        </property>
+        <property name="HFDecayRatio">
+            <value>70</value>
+        </property>
+        <property name="highCut">
+            <value>5650</value>
+        </property>
+        <property name="earlyLateMix">
+            <value>80</value>
         </property>
         <relationship name="automators">
             <destination>{6c47f16c-e87e-4d9b-b414-828f748bacec}</destination>
@@ -230,7 +242,7 @@
             <value>0</value>
         </property>
         <property name="curveShape">
-            <value>-0.652099788</value>
+            <value>-0.273419857</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{7284905a-5571-4c11-887e-613076c8f7f7}">
@@ -238,7 +250,7 @@
             <value>1</value>
         </property>
         <property name="value">
-            <value>-16</value>
+            <value>-22</value>
         </property>
     </object>
     <object class="Automator" id="{6c47f16c-e87e-4d9b-b414-828f748bacec}">
@@ -277,13 +289,13 @@
     </object>
     <object class="AutomationPoint" id="{8c4ea15b-48e0-4dce-92e3-7871708f6c61}">
         <property name="position">
-            <value>0.0049220672682526662</value>
+            <value>0</value>
         </property>
         <property name="value">
-            <value>-38</value>
+            <value>-40</value>
         </property>
         <property name="curveShape">
-            <value>1</value>
+            <value>0.561899424</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{673264c0-e0a8-4fc5-88b3-d1e91118a173}">
@@ -291,7 +303,7 @@
             <value>0.99507793273174738</value>
         </property>
         <property name="value">
-            <value>0</value>
+            <value>9.99999905</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{2e05300d-85b4-48cb-b34e-5cadfecf16e0}">
@@ -307,7 +319,7 @@
             <value>1</value>
         </property>
         <property name="value">
-            <value>200</value>
+            <value>1000</value>
         </property>
     </object>
 </objects>

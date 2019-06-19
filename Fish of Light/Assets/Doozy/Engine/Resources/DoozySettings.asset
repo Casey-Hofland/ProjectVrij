@@ -52,9 +52,5 @@ MonoBehaviour:
   UseOrientationDetector: 0
   UsePlaymaker: 0
   UseTextMeshPro: 0
-<<<<<<< HEAD
   AssetDatabaseSaveAssetsNeeded: 0
-=======
-  AssetDatabaseSaveAssetsNeeded: 1
->>>>>>> fe247c6709a9e7d6b816c03b73818b3cfb17703a
   AssetDatabaseRefreshNeeded: 0
