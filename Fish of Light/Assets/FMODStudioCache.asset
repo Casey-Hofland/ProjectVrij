@@ -15,12 +15,12 @@ MonoBehaviour:
   Path: event:/SFX/sonarLight
   guid: dff586ca5e7cd64e987d3e53aab1ed48
   Banks:
-  - {fileID: -1818004277809213110}
+  - {fileID: -2135284086183277550}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -6098752217111912295}
+  - {fileID: -6081375067476299049}
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
@@ -148,7 +148,7 @@ MonoBehaviour:
   Path: event:/SFX/rockImpact
   guid: ecceba3129faa74f846d442160a9ec81
   Banks:
-  - {fileID: -1818004277809213110}
+  - {fileID: -2135284086183277550}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -200,6 +200,23 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 1320
 --- !u!114 &-6098752217111912295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sonarLight/distanceToPlayer
+  m_EditorClassIdentifier: 
+  Name: distanceToPlayer
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-6081375067476299049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,6 +443,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8585
+--- !u!114 &-2135284086183277550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636965764267044770
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 138752
+  Exists: 1
 --- !u!114 &-1918188909993306212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +501,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 138752
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1719179107719406075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,16 +638,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2947997413123221089}
-  - {fileID: -1818004277809213110}
+  - {fileID: -2135284086183277550}
   EditorEvents:
   - {fileID: 8526147018292119000}
   - {fileID: -8284847549030645431}
   - {fileID: -6923402369556524571}
   MasterBanks:
-  - {fileID: -1818004277809213110}
+  - {fileID: -2135284086183277550}
   StringsBanks:
   - {fileID: 2947997413123221089}
-  stringsBankWriteTime: 636965735198960215
+  stringsBankWriteTime: 636962129076863827
   cacheVersion: 3
 --- !u!114 &330822711771380927
 MonoBehaviour:
@@ -866,7 +903,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636965735198960215
+  lastModified: 636962129076863827
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1323,7 +1360,7 @@ MonoBehaviour:
   Path: event:/SFX/playerSwim
   guid: 0246d361bd46654aaca0c6316e6974bf
   Banks:
-  - {fileID: -1818004277809213110}
+  - {fileID: -2135284086183277550}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

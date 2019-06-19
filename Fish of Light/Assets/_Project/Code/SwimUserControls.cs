@@ -47,11 +47,13 @@ public class SwimUserControls : MonoBehaviour
 			translation += transform.forward * (wKey ? 1 : -1);
 			useSpeed[(wKey ? 1 : 2)] = true;
 		}
+		/*
 		if (dKey != aKey)
 		{
 			translation += transform.right * (dKey ? 1 : -1);
 			useSpeed[3] = true;
 		}
+		*/
 
 		translation.Normalize();
 
