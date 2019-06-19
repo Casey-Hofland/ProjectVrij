@@ -15,6 +15,7 @@ public class SwimController : MonoBehaviour
 	[SerializeField] private float verticalSpeed = 20f;
 	[SerializeField] private float pushbackForce = 40f;
 	[SerializeField] private Vector2 animatorSpeedRange = new Vector2(0.5f, 2f);
+	[SerializeField] private bool animationJump = false;
 
 	[Header("Responsiveness")]
 	[Tooltip("Time in seconds it takes to reach the set speed.")]
@@ -43,6 +44,8 @@ public class SwimController : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody>();
 		camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		eventEmitter = GetComponent<StudioEventEmitter>();
+
+		animator.SetBool("Jump", animationJump);
 
 		Debug.LogWarning("Translation lerping can cause the player to go from fullspeed forwards to fullspeed backwards (lerping not taking direction into account)");
 	}
