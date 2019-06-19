@@ -239,12 +239,12 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 67372040, g: 67372040, b: 134217730, a: 134217730}
+    - _Color: {r: 134217730, g: 132883896, b: 67372040, a: 134217730}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 67372040, g: 67372040, b: 134217730, a: 134217730}
-    - _EmissiveColorLDR: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+    - _EmissiveColor: {r: 134217730, g: 132883896, b: 67372040, a: 134217730}
+    - _EmissiveColorLDR: {r: 1, g: 0.9900622, b: 0.5019608, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
