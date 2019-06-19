@@ -65,7 +65,7 @@ MonoBehaviour:
     min: 0
   fogBaseHeight:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 40
   fogHeightAttenuation:
     m_OverrideState: 1
     m_Value: 0.099

@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 20
-  sidewaysSpeed: 15
+  sidewaysSpeed: 0
   backwardsSpeed: 10
   verticalSpeed: 15
   pushbackForce: 40
