@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{33eb6dcb-e0d2-4cf3-85c3-4f8c22934e53}">
         <property name="assetPath">
-            <value>rockImpact.wav</value>
+            <value>SFX/rockImpact.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{ef3d5bc0-50d4-4d81-aa59-6a0253db514e}">
         <property name="assetPath">
-            <value>sonarLight4.wav</value>
+            <value>SFX/sonarLight4.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

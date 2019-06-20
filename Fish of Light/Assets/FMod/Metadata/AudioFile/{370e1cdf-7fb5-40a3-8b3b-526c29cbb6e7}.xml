@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{370e1cdf-7fb5-40a3-8b3b-526c29cbb6e7}">
         <property name="assetPath">
-            <value>dinoRoar.wav</value>
+            <value>SFX/dinoRoar.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
