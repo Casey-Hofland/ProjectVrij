@@ -3873,17 +3873,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: 
-  PlayEvent: 0
+  Event: event:/SFX/dinoRoar
+  PlayEvent: 3
   StopEvent: 0
-  CollisionTag: 
+  CollisionTag: Player
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 200
 --- !u!1 &1348988742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,17 +3959,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: 
+  Event: event:/SFX/fishBubbles
   PlayEvent: 3
   StopEvent: 0
   CollisionTag: Player
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 200
 --- !u!1001 &1364878061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4553,6 +4553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929505324582301245, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3214f85a1cd90c54b9b334cf3fce7337, type: 3}
