@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 567748787807306681}
   m_Layer: 8
   m_Name: Fin Right VFX
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,10 +241,9 @@ GameObject:
   - component: {fileID: 1854517746255740336}
   - component: {fileID: 1627775186377385829}
   - component: {fileID: 6929505324582301245}
-  - component: {fileID: 1944210284}
   m_Layer: 8
   m_Name: Platvis
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,6 +333,7 @@ MonoBehaviour:
   verticalSpeed: 15
   pushbackForce: 40
   animatorSpeedRange: {x: 0.5, y: 2}
+  animationJump: 0
   accelerationTime: 5
   decelerationTime: 0.6
   turnSmoothing: 10
@@ -380,29 +380,6 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &1944210284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627775186377384090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/SFX/playerSwim
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -727,7 +704,7 @@ GameObject:
   - component: {fileID: 8724652126714368749}
   m_Layer: 8
   m_Name: Tail VFX
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -861,7 +838,7 @@ GameObject:
   - component: {fileID: 6044288204704522413}
   m_Layer: 8
   m_Name: Fin Left VFX
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1149,7 +1126,7 @@ GameObject:
   - component: {fileID: 5346623965988995984}
   m_Layer: 8
   m_Name: Spot Light
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1683,7 +1660,7 @@ GameObject:
   - component: {fileID: 2045293486228297991}
   m_Layer: 8
   m_Name: Armature
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1750,7 +1727,7 @@ GameObject:
   - component: {fileID: 4682907514540631333}
   m_Layer: 8
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

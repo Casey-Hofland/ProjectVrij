@@ -152,7 +152,7 @@ MonoBehaviour:
     min: 0
   fogDistance:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 8
     min: 0
   fogBaseHeight:
     m_OverrideState: 1
