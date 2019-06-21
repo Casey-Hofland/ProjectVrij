@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{9723baa8-fa38-41e7-b627-bdb5d3d5c56b}">
+        <property name="assetPath">
+            <value>Music/Suspense - Organ.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>109.71422916666667</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{5f8c6d1e-3152-4576-afdf-184011b933df}</destination>
+        </relationship>
+    </object>
+</objects>

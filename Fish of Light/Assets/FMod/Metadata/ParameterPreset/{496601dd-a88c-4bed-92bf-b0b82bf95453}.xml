@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{496601dd-a88c-4bed-92bf-b0b82bf95453}">
+        <property name="name">
+            <value>Suspense Level</value>
+        </property>
+        <relationship name="folder">
+            <destination>{cb68d190-f92a-48fb-bdd6-93f3619c4aff}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{528d4555-1103-4ad2-90c0-3ca84d56da51}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{528d4555-1103-4ad2-90c0-3ca84d56da51}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
