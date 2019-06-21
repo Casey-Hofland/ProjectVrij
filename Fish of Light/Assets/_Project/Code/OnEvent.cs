@@ -8,7 +8,7 @@ public class OnEvent : MonoBehaviour
 {
 	[SerializeField] private EventTrigger eventStartTrigger = EventTrigger.None;
 	//[SerializeField] private EventTrigger eventStopTrigger = EventTrigger.None;
-	[SerializeField] private String CollisionTag = "";
+	/*[SerializeField]*/ private String CollisionTag = "";
 	[SerializeField] private bool triggerOnce = false;
 	[SerializeField] private UnityEvent unityEvent;
 
@@ -17,8 +17,10 @@ public class OnEvent : MonoBehaviour
 	public enum EventTrigger
 	{
 		None,
-		ObjectStart,
-		ObjectDestroy,
+		OnStart,
+		OnDestroy,
+		OnEnable,
+		OnDisable,
 		TriggerEnter,
 		TriggerExit,
 		TriggerEnter2D,
@@ -27,8 +29,6 @@ public class OnEvent : MonoBehaviour
 		CollisionExit,
 		CollisionEnter2D,
 		CollisionExit2D,
-		ObjectEnable,
-		ObjectDisable,
 		MouseEnter,
 		MouseExit,
 		MouseDown,
@@ -37,22 +37,22 @@ public class OnEvent : MonoBehaviour
 
 	private void Start()
 	{
-		HandleGameEvent(EventTrigger.ObjectStart);
+		HandleGameEvent(EventTrigger.OnStart);
 	}
 
 	private void OnDestroy()
 	{
-		HandleGameEvent(EventTrigger.ObjectDestroy);
+		HandleGameEvent(EventTrigger.OnDestroy);
 	}
 
 	private void OnEnable()
 	{
-		HandleGameEvent(EventTrigger.ObjectEnable);
+		HandleGameEvent(EventTrigger.OnEnable);
 	}
 
 	private void OnDisable()
 	{
-		HandleGameEvent(EventTrigger.ObjectDisable);
+		HandleGameEvent(EventTrigger.OnDisable);
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -141,11 +141,6 @@ public class OnEvent : MonoBehaviour
 
 	private void HandleGameEvent(EventTrigger gameEvent)
 	{
-		if (triggerOnce && hasTriggered)
-		{
-			return;
-		}
-
 		if (eventStartTrigger == gameEvent)
 		{
 			Play();
@@ -162,9 +157,13 @@ public class OnEvent : MonoBehaviour
 	private void Play()
 	{
 		unityEvent.Invoke();
+		if (triggerOnce && eventStartTrigger != EventTrigger.OnDestroy)
+			Destroy(this);
 	}
 
+	/*
 	private void Stop()
 	{
 	}
+	*/
 }

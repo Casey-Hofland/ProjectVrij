@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8545572192439809692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sonarLight/distanceToPlayer
+  m_EditorClassIdentifier: 
+  Name: distanceToPlayer
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-8284847549030645431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,12 +32,12 @@ MonoBehaviour:
   Path: event:/SFX/sonarLight
   guid: dff586ca5e7cd64e987d3e53aab1ed48
   Banks:
-  - {fileID: 330502568591003056}
+  - {fileID: -6553116507723091605}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8858957289710839040}
+  - {fileID: -2288602127629267630}
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
@@ -66,6 +83,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
+--- !u!114 &-7279117235180895175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/fishBubbles
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/fishBubbles
+  guid: 5ddf4b561265cb489e0e8f6d58737166
+  Banks:
+  - {fileID: -6553116507723091605}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1091
 --- !u!114 &-7087337467766299313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +149,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
+--- !u!114 &-6970202998864223951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/dinoRoar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/dinoRoar
+  guid: c3c19683668e674a9f9a9f457fd213b1
+  Banks:
+  - {fileID: -6553116507723091605}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3450
 --- !u!114 &-6944179630353588051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +211,7 @@ MonoBehaviour:
   Path: event:/SFX/rockImpact
   guid: ecceba3129faa74f846d442160a9ec81
   Banks:
-  - {fileID: 330502568591003056}
+  - {fileID: -6553116507723091605}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -175,6 +238,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 12474
+  Exists: 1
+--- !u!114 &-6553116507723091605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\hofla\Desktop\Projects\Unity\GitHub\ProjectVrij\Fish of Light\Assets\FMod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636967223181821664
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 183680
   Exists: 1
 --- !u!114 &-6125841005850830010
 MonoBehaviour:
@@ -276,6 +359,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 120224
   Exists: 1
+--- !u!114 &-5522329382669131102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  guid: c3c19683668e674a9f9a9f457fd213b1
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3450
 --- !u!114 &-5060276769841949479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +548,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8585
+--- !u!114 &-2288602127629267630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sonarLight/distanceToPlayer
+  m_EditorClassIdentifier: 
+  Name: distanceToPlayer
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-2135284086183277550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,18 +760,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2947997413123221089}
-  - {fileID: 330502568591003056}
+  - {fileID: -6553116507723091605}
   EditorEvents:
   - {fileID: 8526147018292119000}
   - {fileID: -8284847549030645431}
   - {fileID: -6923402369556524571}
-  - {fileID: 3333942126895629214}
-  - {fileID: 3722505401651017922}
+  - {fileID: -7279117235180895175}
+  - {fileID: -6970202998864223951}
   MasterBanks:
-  - {fileID: 330502568591003056}
+  - {fileID: -6553116507723091605}
   StringsBanks:
   - {fileID: 2947997413123221089}
-  stringsBankWriteTime: 636966663470940015
+  stringsBankWriteTime: 636967223181901421
   cacheVersion: 3
 --- !u!114 &330502568591003056
 MonoBehaviour:
@@ -670,7 +792,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 183680
-  Exists: 1
+  Exists: 0
 --- !u!114 &330822711771380927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,10 +1047,10 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636966663470940015
+  lastModified: 636967223181901421
   LoadResult: 0
   FileSizes:
-  - Name: 
+  - Name: Desktop
     Value: 900
   Exists: 1
 --- !u!114 &3242667682551007090
@@ -962,8 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/fishBubbles
   guid: 5ddf4b561265cb489e0e8f6d58737166
-  Banks:
-  - {fileID: 330502568591003056}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1031,8 +1152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/dinoRoar
   guid: c3c19683668e674a9f9a9f457fd213b1
-  Banks:
-  - {fileID: 330502568591003056}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1445,7 +1565,7 @@ MonoBehaviour:
   Path: event:/SFX/playerSwim
   guid: 0246d361bd46654aaca0c6316e6974bf
   Banks:
-  - {fileID: 330502568591003056}
+  - {fileID: -6553116507723091605}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1453,6 +1573,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1320
+--- !u!114 &8531124748607999733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sonarLight/distanceToPlayer
+  m_EditorClassIdentifier: 
+  Name: distanceToPlayer
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8813567159778292865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1625,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &9128158176385865431
 MonoBehaviour:
   m_ObjectHideFlags: 0

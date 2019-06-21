@@ -57,8 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99fc2260788f684ea948063308d6697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventStartTrigger: 3
-  CollisionTag: Player
+  eventStartTrigger: 5
   triggerOnce: 1
   unityEvent:
     m_PersistentCalls:

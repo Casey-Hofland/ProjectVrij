@@ -28,11 +28,13 @@ public class SceneManagerController : MonoBehaviour
         animator.SetTrigger("fadeOut");
     }
 
+	/*
     public void LoadScene(string sceneName)
     {
-        int sceneIndex = SceneManager.GetSceneByName(sceneName).buildIndex;
+        int sceneIndex = SceneManager.GetSceneByName(sceneName).buildIndex; // GetSceneByName Only returns active scenes, code faulty!!!
         LoadScene(sceneIndex);
     }
+	*/
 
     public void LoadNextScene()
     {
