@@ -3810,6 +3810,7 @@ GameObject:
   - component: {fileID: 1267453765}
   - component: {fileID: 1267453767}
   - component: {fileID: 1267453768}
+  - component: {fileID: 1267453769}
   m_Layer: 0
   m_Name: LochnessTrigger
   m_TagString: Untagged
@@ -3884,6 +3885,29 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 1
   OverrideMaxDistance: 200
+--- !u!114 &1267453769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267453764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/dinoRoar
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 200
 --- !u!1 &1348988742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,7 +3919,7 @@ GameObject:
   - component: {fileID: 1348988743}
   - component: {fileID: 1348988745}
   - component: {fileID: 1348988744}
-  - component: {fileID: 1348988746}
+  - component: {fileID: 1348988747}
   m_Layer: 0
   m_Name: FlockTrigger
   m_TagString: Untagged
@@ -3947,7 +3971,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1348988746
+--- !u!114 &1348988747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3962,9 +3986,9 @@ MonoBehaviour:
   Event: event:/SFX/fishBubbles
   PlayEvent: 3
   StopEvent: 0
-  CollisionTag: Player
+  CollisionTag: 
   AllowFadeout: 1
-  TriggerOnce: 1
+  TriggerOnce: 0
   Preload: 0
   Params: []
   OverrideAttenuation: 1
@@ -4479,11 +4503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1627775186377384090, guid: 3214f85a1cd90c54b9b334cf3fce7337,
-        type: 3}
-      propertyPath: m_Name
-      value: Platvis
-      objectReference: {fileID: 0}
     - target: {fileID: 2363366368183505545, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4539,6 +4558,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1627775186377384090, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+        type: 3}
+      propertyPath: m_Name
+      value: Platvis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929505324582301245, guid: 3214f85a1cd90c54b9b334cf3fce7337,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 567748787807306681, guid: 3214f85a1cd90c54b9b334cf3fce7337,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4553,11 +4582,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6929505324582301245, guid: 3214f85a1cd90c54b9b334cf3fce7337,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3214f85a1cd90c54b9b334cf3fce7337, type: 3}
