@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{3471d78b-caff-4667-8623-5b13047b6312}">
+        <property name="name">
+            <value>Peaceful</value>
+        </property>
+        <relationship name="folder">
+            <destination>{cb68d190-f92a-48fb-bdd6-93f3619c4aff}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{5ff4b4ba-d1c3-4db8-8ff7-e927e5d67ae8}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{5ff4b4ba-d1c3-4db8-8ff7-e927e5d67ae8}">
+        <property name="minimum">
+            <value>10</value>
+        </property>
+        <property name="maximum">
+            <value>11</value>
+        </property>
+        <property name="initialValue">
+            <value>10</value>
+        </property>
+    </object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{c47e8d12-4613-48a0-8289-0542dbd02034}">
+        <property name="assetPath">
+            <value>Music/Peaceful - Harp 2(2).wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>29.142791666666668</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{5f8c6d1e-3152-4576-afdf-184011b933df}</destination>
+        </relationship>
+    </object>
+</objects>
