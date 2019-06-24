@@ -224,6 +224,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{f11871de-281c-440a-94a8-d61603668042}">
+        <property name="volume">
+            <value>-6</value>
+        </property>
         <relationship name="effectChain">
             <destination>{b210fc21-a8f7-42fd-a8c9-d16369f251e2}</destination>
         </relationship>
@@ -477,6 +480,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{4fd0a7fc-92aa-45fd-9969-eb70bfd53fe9}">
+        <property name="volume">
+            <value>1</value>
+        </property>
         <property name="name">
             <value>Synthpad</value>
         </property>
@@ -534,6 +540,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{4af46906-bf69-4a74-82e4-76bc4e340a9a}">
+        <property name="volume">
+            <value>3</value>
+        </property>
         <property name="name">
             <value>Harp</value>
         </property>
@@ -1049,7 +1058,7 @@
             <value>0.24941543257989088</value>
         </property>
         <property name="value">
-            <value>3.81469727e-06</value>
+            <value>-2.19999981</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{9e16d40e-3629-4e00-bfa9-15e67bc14ae8}">
