@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Design/Scenes/Cave.unity
     guid: fff3fde8b05b7a14e98fe47fed866038
+  - enabled: 1
+    path: Assets/_Project/Design/Scenes/View.unity
+    guid: df0cd69653549ae45986447ee5e59959
+  - enabled: 1
+    path: Assets/_Project/Design/Scenes/Denn.unity
+    guid: 88ad1e5eef68002409e7cbf3befb2527
   m_configObjects: {}
