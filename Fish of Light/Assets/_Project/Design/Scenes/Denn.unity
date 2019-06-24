@@ -6352,6 +6352,8 @@ GameObject:
   - component: {fileID: 217911482}
   - component: {fileID: 217911483}
   - component: {fileID: 217911484}
+  - component: {fileID: 217911485}
+  - component: {fileID: 217911486}
   m_Layer: 0
   m_Name: AnglerFishTrigger
   m_TagString: Untagged
@@ -6384,7 +6386,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15, y: 10, z: 1}
+  m_Size: {x: 30, y: 10, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &217911484
 MonoBehaviour:
@@ -6407,6 +6409,59 @@ MonoBehaviour:
     triggerName: OnTriggerEnter
     delay: 0
     repeat: 0
+--- !u!114 &217911485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217911481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/dinoRoar
+  PlayEvent: 3
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 100
+--- !u!114 &217911486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217911481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99fc2260788f684ea948063308d6697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventStartTrigger: 5
+  triggerOnce: 1
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1138919483}
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &219980348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27396,6 +27451,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1289887171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1138919483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4865071233215535910, guid: dc4dfffdb4467fd4ba23987478717640,
+    type: 3}
+  m_PrefabInstance: {fileID: 1872482761}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958c37476e23e0941841ddf16e432e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1141203881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36515,6 +36582,85 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4230ef041039386419f340df03378e2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63839b344b4d144ba35d3c7224dfce9, type: 3}
+--- !u!1001 &1546621826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4385671055654428460, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_Name
+      value: MainAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428458, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428458, guid: 51be97a16e430dc44bd6f2208f042fbe,
+        type: 3}
+      propertyPath: Params.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51be97a16e430dc44bd6f2208f042fbe, type: 3}
 --- !u!1001 &1547684349
 PrefabInstance:
   m_ObjectHideFlags: 0

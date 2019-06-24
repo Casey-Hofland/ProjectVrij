@@ -5665,7 +5665,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!114 &226079954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11383,8 +11382,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: Example Music
-        SoundName: Moon Drops
+        DatabaseName: General
+        SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -12138,6 +12137,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597089253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &603640825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4385671055654428460, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_Name
+      value: MainAudioPeacefull
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385671055654428461, guid: beca8c1795bbd5d46a24a64a9d80acc1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: beca8c1795bbd5d46a24a64a9d80acc1, type: 3}
 --- !u!1 &616207792
 GameObject:
   m_ObjectHideFlags: 0
@@ -15192,7 +15260,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52.3
+  m_fontSize: 43.45
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19005,7 +19073,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215505629}
-  m_LocalRotation: {x: 0.07285288, y: -0.11889973, z: 0.008747912, w: 0.99019134}
+  m_LocalRotation: {x: 0.07317056, y: -0.074615434, z: 0.005489716, w: 0.99450916}
   m_LocalPosition: {x: 0, y: 12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20930,22 +20998,22 @@ PrefabInstance:
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07285288
+      value: 0.07317056
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.11889973
+      value: -0.074615434
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.008747912
+      value: 0.005489716
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99019134
+      value: 0.99450916
       objectReference: {fileID: 0}
     - target: {fileID: 1202167510692213179, guid: f67306c81075f6b4bafdfbda4024cd3a,
         type: 3}
@@ -22968,7 +23036,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52.3
+  m_fontSize: 43.45
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26968,7 +27036,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 0}
 --- !u!114 &1587399408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32356,11 +32423,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8461462151640472745, guid: 57fef23747761a8409fd89652c52f8c7,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 376521200}
     - target: {fileID: 6411464357784009855, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
       propertyPath: Params.Array.size
@@ -32386,6 +32448,11 @@ PrefabInstance:
       propertyPath: OverrideMaxDistance
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8461462151640472745, guid: 57fef23747761a8409fd89652c52f8c7,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 376521200}
     - target: {fileID: 8406518393012703913, guid: 57fef23747761a8409fd89652c52f8c7,
         type: 3}
       propertyPath: shapeRadius
