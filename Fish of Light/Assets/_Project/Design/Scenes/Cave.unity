@@ -9930,7 +9930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99fc2260788f684ea948063308d6697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventStartTrigger: 3
+  eventStartTrigger: 5
   triggerOnce: 1
   unityEvent:
     m_PersistentCalls:
@@ -20670,6 +20670,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc4dfffdb4467fd4ba23987478717640, type: 3}
+--- !u!114 &1817013719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4865071233215535910, guid: dc4dfffdb4467fd4ba23987478717640,
+    type: 3}
+  m_PrefabInstance: {fileID: 1817013718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958c37476e23e0941841ddf16e432e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1825718269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22314,7 +22326,7 @@ PrefabInstance:
     - target: {fileID: 6142010757165585513, guid: bc18ec8c1ffe42048b4b425cd7e68d8e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 133.7
+      value: 124.700005
       objectReference: {fileID: 0}
     - target: {fileID: 6142010757165585513, guid: bc18ec8c1ffe42048b4b425cd7e68d8e,
         type: 3}
@@ -22355,6 +22367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142010757165585515, guid: bc18ec8c1ffe42048b4b425cd7e68d8e,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1817013719}
+    - target: {fileID: 6142010757165585515, guid: bc18ec8c1ffe42048b4b425cd7e68d8e,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc18ec8c1ffe42048b4b425cd7e68d8e, type: 3}
