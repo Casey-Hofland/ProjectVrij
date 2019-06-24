@@ -7853,7 +7853,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 1
-  OverrideMaxDistance: 200
+  OverrideMaxDistance: 10000
 --- !u!4 &1275740912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9fda26adf49a1f743ae4df4cca7c53db,

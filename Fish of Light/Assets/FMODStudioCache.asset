@@ -24,6 +24,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 165714
+--- !u!114 &-9124385630572299261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sonarLight/distanceToPlayer
+  m_EditorClassIdentifier: 
+  Name: distanceToPlayer
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-8545572192439809692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +73,12 @@ MonoBehaviour:
   Path: event:/SFX/sonarLight
   guid: dff586ca5e7cd64e987d3e53aab1ed48
   Banks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -3974427917292000369}
+  - {fileID: -9124385630572299261}
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
@@ -141,7 +158,7 @@ MonoBehaviour:
   Path: event:/SFX/fishBubbles
   guid: 5ddf4b561265cb489e0e8f6d58737166
   Banks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -164,7 +181,6 @@ MonoBehaviour:
   Path: 
   guid: db23a5e87fe531439490e2a21a93ef00
   Banks:
-  - {fileID: 6292766018632882734}
   - {fileID: 6292766018632882734}
   IsStream: 1
   Is3D: 0
@@ -231,7 +247,7 @@ MonoBehaviour:
   Path: event:/SFX/dinoRoar
   guid: c3c19683668e674a9f9a9f457fd213b1
   Banks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -278,7 +294,7 @@ MonoBehaviour:
   Path: event:/SFX/rockImpact
   guid: ecceba3129faa74f846d442160a9ec81
   Banks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -471,6 +487,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1320
+--- !u!114 &-4698300581691859610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Start-ending theme
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Start-ending theme
+  guid: db23a5e87fe531439490e2a21a93ef00
+  Banks:
+  - {fileID: 4947739898773764495}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 82285
 --- !u!114 &-4617276017376491856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +568,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3573845642990255793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,6 +850,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &-783977233851604392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main theme/Peaceful
+  m_EditorClassIdentifier: 
+  Name: Peaceful
+  Min: 10
+  Max: 11
+  Default: 10
+  Exists: 1
 --- !u!114 &-349794360716263018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +903,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 818
   Exists: 1
+--- !u!114 &-97330121044096547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main theme/Suspense Level
+  m_EditorClassIdentifier: 
+  Name: Suspense Level
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,7 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2947997413123221089}
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   EditorEvents:
   - {fileID: 8526147018292119000}
   - {fileID: -8284847549030645431}
@@ -869,11 +942,13 @@ MonoBehaviour:
   - {fileID: -7279117235180895175}
   - {fileID: -6970202998864223951}
   - {fileID: -7195034442297747874}
+  - {fileID: 8410341939040289220}
+  - {fileID: -4698300581691859610}
   MasterBanks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   StringsBanks:
   - {fileID: 2947997413123221089}
-  stringsBankWriteTime: 636967223181901421
+  stringsBankWriteTime: 636969817033260318
   cacheVersion: 3
 --- !u!114 &324270593453042202
 MonoBehaviour:
@@ -1200,11 +1275,11 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets\FMod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636967223181901421
+  lastModified: 636969817033260318
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 900
+    Value: 1020
   Exists: 1
 --- !u!114 &3242667682551007090
 MonoBehaviour:
@@ -1450,6 +1525,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 672
   Exists: 1
+--- !u!114 &4947739898773764495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: D:\School\Blok4\Vrij\Game\Fish of Light\Assets\FMod\Build\Desktop\Master Bank.bank
+  lastModified: 636970026864146705
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 6269408
+  Exists: 1
 --- !u!114 &5322887525932802273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,7 +1702,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 6269408
-  Exists: 1
+  Exists: 0
 --- !u!114 &6417490550314529808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1856,31 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &8410341939040289220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Main theme
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Main theme
+  guid: a010af0a51c8af4aa0a775556a9cd858
+  Banks:
+  - {fileID: 4947739898773764495}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -783977233851604392}
+  - {fileID: -97330121044096547}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 165714
 --- !u!114 &8482880993967944166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,7 +1913,7 @@ MonoBehaviour:
   Path: event:/SFX/playerSwim
   guid: 0246d361bd46654aaca0c6316e6974bf
   Banks:
-  - {fileID: 6292766018632882734}
+  - {fileID: 4947739898773764495}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
